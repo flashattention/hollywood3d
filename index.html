@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hollywood — Golden Hour</title>
+  <meta name="description" content="A voxel love letter to Hollywood and Downtown Los Angeles, from golden hour to city lights." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><text y=%2214%22 font-size=%2214%22>★</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,300;1,400&family=Gowun+Batang:wght@400;700&family=Silkscreen&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <canvas id="scene"></canvas>
+  <div class="shade"></div>
+
+  <div id="loader">
+    <div class="loader-title">HOLLYWOOD<span>★</span></div>
+    <div class="bar"><span></span></div>
+    <div class="loader-msg">불러오는 중…</div>
+  </div>
+
+  <header class="hud">
+    <div class="brand">★ HOLLYWOOD <em>Los Angeles, California</em></div>
+    <div class="clock"><span id="clock">5:52</span> <small id="ampm">PM PDT</small></div>
+  </header>
+
+  <nav id="chapters" aria-label="Chapters"></nav>
+
+  <div class="cards">
+    <article class="card hero">
+      <p class="kicker">CH.01 — GRIFFITH PARK · 34.1184°N 118.3004°W</p>
+      <h1>Hollywood</h1>
+      <p class="sub">at golden hour</p>
+      <p class="ko">해가 산타모니카 만으로 천천히 가라앉는 시간. 그리피스 천문대의 흰 벽이 마지막 빛을 붙잡고, 저 멀리 리 산 위의 아홉 글자가 도시를 내려다본다.</p>
+    </article>
+    <article class="card">
+      <p class="kicker">CH.02 — MOUNT LEE · SINCE 1923</p>
+      <h2>The Sign</h2>
+      <p class="ko">처음 이름은 ‘HOLLYWOODLAND’. 부동산 광고판으로 세워졌던 글자들은 백 년이 지나 꿈의 상징이 되었다. 글자 하나의 높이는 약 14미터.</p>
+    </article>
+    <article class="card">
+      <p class="kicker">CH.03 — SUNSET BOULEVARD</p>
+      <h2>Palms &amp; Afterglow</h2>
+      <p class="ko">태평양까지 곧게 뻗은 선셋 대로. 해가 지평선에 닿는 순간, 야자수들은 분홍빛 하늘에 그어진 검은 붓질이 된다.</p>
+    </article>
+    <article class="card">
+      <p class="kicker">CH.04 — HOLLYWOOD BLVD · TCL CHINESE THEATRE</p>
+      <h2>Lights, Camera</h2>
+      <p class="ko">1927년에 문을 연 차이니즈 시어터. 서치라이트가 오늘 밤의 프리미어를 알리고, 보도 위엔 2,700개가 넘는 별이 반짝인다.</p>
+    </article>
+    <article class="card">
+      <p class="kicker">CH.05 — CAPITOL RECORDS · 1956</p>
+      <h2>Stacked Records</h2>
+      <p class="ko">레코드판을 쌓아 올린 듯한 원형 타워. 꼭대기의 붉은 불빛은 지금도 모스 부호로 H·O·L·L·Y·W·O·O·D를 깜빡이고 있다.</p>
+      <p class="morse">···· ——— ·—·· ·—·· —·—— ·—— ——— ——— —··</p>
+    </article>
+    <article class="card">
+      <p class="kicker">CH.06 — DOWNTOWN LOS ANGELES</p>
+      <h2>City of Towers</h2>
+      <p class="ko">US 뱅크 타워의 왕관, 윌셔 그랜드의 첨탑, 디즈니 콘서트홀의 은빛 곡선. 101번 프리웨이를 따라 흰 빛과 붉은 빛의 강이 흐른다.</p>
+    </article>
+    <article class="card finale">
+      <p class="kicker">CH.07 — THE LOS ANGELES BASIN</p>
+      <h2>City of Stars</h2>
+      <p class="ko">별은 하늘이 아니라, 땅 위에 있었다.</p>
+      <p class="credits">THE END · A VOXEL LOVE LETTER TO LOS ANGELES</p>
+    </article>
+  </div>
+
+  <div class="scroll-hint"><span>SCROLL</span><i></i></div>
+  <div id="track"></div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
